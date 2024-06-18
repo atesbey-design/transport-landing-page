@@ -88,22 +88,18 @@ const Home = () => {
           name="description"
           content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık"
         />
+        <meta name="keywords" content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti,servis,personel taşıma" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="navbar">
+      <header className="navbar">
         <div className="logo">
-          <img src="/transport.png" alt="Logo" />
-        </div>
-        <div className="menu-toggle">
-          <div></div>
-          <div></div>
-          <div></div>
+          <img src="/big-elit-tur.png" alt="Servis Taşımacılığı Logo" />
         </div>
         <nav className="nav-links">
-          <a href="#">Ana Sayfa</a>
-          <a href="#">Hizmetler</a>
-          <a href="#">Paketler</a>
-          <a href="#">Galeri</a>
+          <a href="#home">Ana Sayfa</a>
+          <a href="#services">Hizmetler</a>
+          <a href="#packages">Paketler</a>
+          <a href="#gallery">Galeri</a>
         </nav>
         <div className="cta">
           <button
@@ -114,60 +110,56 @@ const Home = () => {
             İletişime Geç
           </button>
         </div>
-      </div>
-      <div className="hero">
+      </header>
+      <section className="hero" id="home">
         <div className="overlay"></div>
         <h1>Güvenilir Taşımacılık Hizmeti</h1>
         <p>Konforlu ve Kolay Taşımacılık</p>
         <p>Telefon: +90 123456789</p>
         <button>Şimdi Rezervasyon Yap</button>
-      </div>
+      </section>
 
-      {/* Hizmetlerimiz Bölümü */}
-      <div className="services">
+      <section className="services" id="services">
         <h2>Hizmetlerimiz</h2>
         <p>Her Zaman Hizmetinizdeyiz</p>
         <div className="service-cards">
           <div className="service-card">
-            <img src="/taksi.svg" alt="Taksi" />
-            <h3>Taksi</h3>
-            <p>Konforlu ve kolay taksi hizmetlerimizden yararlanın.</p>
+            <img src="/taksi.svg" alt="personel taşıma" />
+            <h3>Personel</h3>
+            <p>Personel taşımacılık hizmetleri sunuyoruz.</p>
           </div>
           <div className="service-card">
-            <img src="/paket.svg" alt="Paket" />
-            <h3>Paket</h3>
-            <p>Paketlerinizi güvenle ve zamanında teslim ediyoruz.</p>
+            <img src="/paket.svg" alt="öğrenci taşıma" />
+            <h3>Öğrenci </h3>
+            <p>Öğrencilere özel taşımacılık hizmetleri sunuyoruz.</p>
           </div>
           <div className="service-card">
-            <img src="/servis.svg" alt="Servis" />
+            <img src="/servis.svg" alt="Servis Hizmeti" />
             <h3>Hizmet</h3>
             <p>24/7 hızlı taksi hizmetleri. Her zaman hizmetinizdeyiz.</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* 724 Bölümü */}
-      <div className="hero-orange">
+      <section className="hero-orange" id="packages">
         <div className="overlay"></div>
         <div className="hero-content">
-          
-          <img src="/bus-logo.png" alt="Taxi Icon" />
-          <h1>24/7 Güvenilir Taksi Hizmeti</h1>
+          <img src="/bus-driver.svg" alt="Otobüs Şöforü" />
+          <h1>24/7 Güvenilir Servis Hizmeti</h1>
           <p>
             Konforlu ve Kolay Taşımacılık Hizmetlerimizle Yolculuğun Tadını
             Çıkarın
           </p>
           <button>Şimdi Rezervasyon Yap</button>
         </div>
-      </div>
+      </section>
 
-      {/* Araçlarımız Bölümü */}
-      <div className="vehicles">
+      <section className="vehicles">
         <h2>Araçlarımız</h2>
-        <p>24/7 hızlı taksi hizmetleri</p>
+        <p>24/7 hızlı servis hizmetleri</p>
         <div className="vehicle-cards">
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Ford" />
+            <img src="/back.jpg" alt="Ford Taksi" />
             <h3>Ford</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -180,7 +172,7 @@ const Home = () => {
             <button>Hemen Rezervasyon Yap</button>
           </div>
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Toyota" />
+            <img src="/back.jpg" alt="Toyota Taksi" />
             <h3>Toyota</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -193,7 +185,7 @@ const Home = () => {
             <button>Hemen Rezervasyon Yap</button>
           </div>
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Mercedes" />
+            <img src="/back.jpg" alt="Mercedes Taksi" />
             <h3>Mercedes</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -206,37 +198,35 @@ const Home = () => {
             <button>Hemen Rezervasyon Yap</button>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Galeri Bölümü */}
-      <div className="gallery">
-        <h2>Galeri</h2>
-        <p>En iyi araç resimlerimiz</p>
-      
-        <div className="gallery-images">
-          <div className="gallery-item">
-            <img src="/back.jpg" alt="Araba 1" />
-          </div>
-          <div className="gallery-item">
-            <img src="/back2.jpg" alt="Araba 2" />
-          </div>
-          <div className="gallery-item">
-            <img src="/back.jpg" alt="Araba 3" />
-          </div>
-          <div className="gallery-item">
-            <img src="/back2.jpg" alt="Araba 4" />
-          </div>
-          <div className="gallery-item">
-            <img src="/back.jpg" alt="Araba 5" />
-          </div>
-          <div className="gallery-item">
-            <img src="/back2.jpg" alt="Araba 6" />
-          </div>
-        </div>
-      </div>
+      <div className="gallery" id="gallery">
+  <h2>Galeri</h2>
+  <p>En iyi araç resimlerimiz</p>
+  <div className="gallery-grid">
+    <div className="gallery-item">
+      <img src="/back.jpg" alt="Araba 1" />
+    </div>
+    <div className="gallery-item">
+      <img src="/back2.jpg" alt="Araba 2" />
+    </div>
+    <div className="gallery-item">
+      <img src="/back.jpg" alt="Araba 3" />
+    </div>
+    <div className="gallery-item">
+      <img src="/back2.jpg" alt="Araba 4" />
+    </div>
+    <div className="gallery-item">
+      <img src="/back.jpg" alt="Araba 5" />
+    </div>
+    <div className="gallery-item">
+      <img src="/back2.jpg" alt="Araba 6" />
+    </div>
+  </div>
+</div>
 
-      {/* Görüşler Bölümü */}
-      <div className="testimonials">
+
+      <section className="testimonials">
         <h2>GÖRÜŞLER</h2>
         <p>İnsanlar bizi seviyor</p>
         <div className="testimonial-content">
@@ -253,9 +243,8 @@ const Home = () => {
             <div className="stars">★★★★★</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* WhatsApp İkonu */}
       <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="/whatsapp-icon.png" alt="WhatsApp" className="whatsapp-icon" />
       </a>
