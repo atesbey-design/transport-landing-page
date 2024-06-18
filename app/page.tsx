@@ -64,9 +64,19 @@ const Home = () => {
     changeTestimonial();
     const testimonialIntervalId = setInterval(changeTestimonial, 5000);
 
+    // Navbar Toggle Script
+    const menuToggle = document.querySelector(".menu-toggle") as HTMLElement;
+    const navLinks = document.querySelector(".nav-links") as HTMLElement;
+
+    menuToggle?.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+
     return () => {
       clearInterval(intervalId);
       clearInterval(testimonialIntervalId);
+      menuToggle?.removeEventListener("click", () => {});
     };
   }, []);
 
@@ -84,7 +94,12 @@ const Home = () => {
         <div className="logo">
           <img src="/transport.png" alt="Logo" />
         </div>
-        <nav>
+        <div className="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav className="nav-links">
           <a href="#">Ana Sayfa</a>
           <a href="#">Hizmetler</a>
           <a href="#">Paketler</a>
@@ -135,6 +150,7 @@ const Home = () => {
       <div className="hero-orange">
         <div className="overlay"></div>
         <div className="hero-content">
+          
           <img src="/bus-logo.png" alt="Taxi Icon" />
           <h1>24/7 Güvenilir Taksi Hizmeti</h1>
           <p>
@@ -196,13 +212,7 @@ const Home = () => {
       <div className="gallery">
         <h2>Galeri</h2>
         <p>En iyi araç resimlerimiz</p>
-        <div className="gallery-buttons">
-          <button className="active">Hepsi</button>
-          <button>Ofis</button>
-          <button>Düğün</button>
-          <button>Etkinlikler</button>
-          <button>VIP Rezervasyon</button>
-        </div>
+      
         <div className="gallery-images">
           <div className="gallery-item">
             <img src="/back.jpg" alt="Araba 1" />
@@ -245,9 +255,10 @@ const Home = () => {
         </div>
       </div>
 
+      {/* WhatsApp İkonu */}
       <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-  <img src="/whatsapp-icon.png" alt="WhatsApp" className="whatsapp-icon" />
-</a>
+        <img src="/whatsapp-icon.png" alt="WhatsApp" className="whatsapp-icon" />
+      </a>
     </>
   );
 };
