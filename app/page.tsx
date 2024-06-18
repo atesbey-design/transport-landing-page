@@ -89,7 +89,8 @@ const Home = () => {
           content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık"
         />
         <meta name="keywords" content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti,servis,personel taşıma" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/big-elit-tur.png"  />
+
       </Head>
       <header className="navbar">
         <div className="logo">
