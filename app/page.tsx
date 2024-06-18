@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 
 const Home = () => {
+  const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
   useEffect(() => {
     // Hero section image slider
     let currentIndex = 0;
@@ -24,20 +25,20 @@ const Home = () => {
         text: "Harika Destek, hızlı ve etkili hizmetiniz için, dostça ve profesyonel destek ekibiniz için teşekkür etmek istiyorum! Uzman firmanızı tüm arkadaşlarıma tavsiye edeceğim.",
         author: "William Hoy",
         stars: "★★★★★",
-        image: "/author.jpg"
+        image: "/author.jpg",
       },
       {
         text: "Mükemmel hizmet! Taşımacılık ihtiyaçlarım için her zaman bu firmayı tercih edeceğim.",
         author: "Jane Doe",
         stars: "★★★★★",
-        image: "/author2.jpg"
+        image: "/author2.jpg",
       },
       {
         text: "Hızlı ve güvenilir hizmet. Gerçekten çok memnun kaldım. Teşekkürler!",
         author: "John Smith",
         stars: "★★★★★",
-        image: "/author3.jpg"
-      }
+        image: "/author3.jpg",
+      },
     ];
     const testimonialTextElement = document.querySelector(
       ".testimonial-text p"
@@ -88,9 +89,11 @@ const Home = () => {
           name="description"
           content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık"
         />
-        <meta name="keywords" content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti,servis,personel taşıma" />
-        <link rel="icon" href="/big-elit-tur.png"  />
-
+        <meta
+          name="keywords"
+          content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti,servis,personel taşıma"
+        />
+        <link rel="icon" href="/big-elit-tur.png" />
       </Head>
       <header className="navbar">
         <div className="logo">
@@ -103,13 +106,13 @@ const Home = () => {
           <a href="#gallery">Galeri</a>
         </nav>
         <div className="cta">
-          <button
-            onClick={() =>
-              window.open("https://wa.me/YOUR_WHATSAPP_NUMBER", "_blank")
-            }
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
           >
-            İletişime Geç
-          </button>
+            <button>Rezervasyon Yap</button>
+          </a>
         </div>
       </header>
       <section className="hero" id="home">
@@ -117,7 +120,11 @@ const Home = () => {
         <h1>Güvenilir Taşımacılık Hizmeti</h1>
         <p>Konforlu ve Kolay Taşımacılık</p>
         <p>Telefon: +90 123456789</p>
+        <a target="_blank" rel="noopener noreferrer"   href={`https://wa.me/${WHATSAPP_NUMBER}`}>
+
         <button>Şimdi Rezervasyon Yap</button>
+</a>
+      
       </section>
 
       <section className="services" id="services">
@@ -151,7 +158,13 @@ const Home = () => {
             Konforlu ve Kolay Taşımacılık Hizmetlerimizle Yolculuğun Tadını
             Çıkarın
           </p>
-          <button>Şimdi Rezervasyon Yap</button>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+          >
+            <button>Hemen Rezervasyon Yap</button>
+          </a>
         </div>
       </section>
 
@@ -170,7 +183,13 @@ const Home = () => {
               <span>2024</span>
             </div>
             <p className="price">$1,000.00/Gün</p>
-            <button>Hemen Rezervasyon Yap</button>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            >
+              <button>Hemen Rezervasyon Yap</button>
+            </a>
           </div>
           <div className="vehicle-card">
             <img src="/back.jpg" alt="Toyota Taksi" />
@@ -183,7 +202,13 @@ const Home = () => {
               <span>2024</span>
             </div>
             <p className="price">$1,000.00/Gün</p>
-            <button>Hemen Rezervasyon Yap</button>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            >
+              <button>Hemen Rezervasyon Yap</button>
+            </a>
           </div>
           <div className="vehicle-card">
             <img src="/back.jpg" alt="Mercedes Taksi" />
@@ -196,36 +221,41 @@ const Home = () => {
               <span>2024</span>
             </div>
             <p className="price">$1,000.00/Gün</p>
-            <button>Hemen Rezervasyon Yap</button>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            >
+              <button>Hemen Rezervasyon Yap</button>
+            </a>
           </div>
         </div>
       </section>
 
       <div className="gallery" id="gallery">
-  <h2>Galeri</h2>
-  <p>En iyi araç resimlerimiz</p>
-  <div className="gallery-grid">
-    <div className="gallery-item">
-      <img src="/back.jpg" alt="Araba 1" />
-    </div>
-    <div className="gallery-item">
-      <img src="/back2.jpg" alt="Araba 2" />
-    </div>
-    <div className="gallery-item">
-      <img src="/back.jpg" alt="Araba 3" />
-    </div>
-    <div className="gallery-item">
-      <img src="/back2.jpg" alt="Araba 4" />
-    </div>
-    <div className="gallery-item">
-      <img src="/back.jpg" alt="Araba 5" />
-    </div>
-    <div className="gallery-item">
-      <img src="/back2.jpg" alt="Araba 6" />
-    </div>
-  </div>
-</div>
-
+        <h2>Galeri</h2>
+        <p>En iyi araç resimlerimiz</p>
+        <div className="gallery-grid">
+          <div className="gallery-item">
+            <img src="/back.jpg" alt="Araba 1" />
+          </div>
+          <div className="gallery-item">
+            <img src="/back2.jpg" alt="Araba 2" />
+          </div>
+          <div className="gallery-item">
+            <img src="/back.jpg" alt="Araba 3" />
+          </div>
+          <div className="gallery-item">
+            <img src="/back2.jpg" alt="Araba 4" />
+          </div>
+          <div className="gallery-item">
+            <img src="/back.jpg" alt="Araba 5" />
+          </div>
+          <div className="gallery-item">
+            <img src="/back2.jpg" alt="Araba 6" />
+          </div>
+        </div>
+      </div>
 
       <section className="testimonials">
         <h2>GÖRÜŞLER</h2>
@@ -234,7 +264,9 @@ const Home = () => {
           <div className="quote-icon">“</div>
           <div className="testimonial-text">
             <p>
-              Harika Destek, hızlı ve etkili hizmetiniz için, dostça ve profesyonel destek ekibiniz için teşekkür etmek istiyorum! Uzman firmanızı tüm arkadaşlarıma tavsiye edeceğim.
+              Harika Destek, hızlı ve etkili hizmetiniz için, dostça ve
+              profesyonel destek ekibiniz için teşekkür etmek istiyorum! Uzman
+              firmanızı tüm arkadaşlarıma tavsiye edeceğim.
             </p>
           </div>
           <div className="quote-icon right">”</div>
@@ -246,8 +278,17 @@ const Home = () => {
         </div>
       </section>
 
-      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="/whatsapp-icon.png" alt="WhatsApp" className="whatsapp-icon" />
+      <a
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+      >
+        <img
+          src="/whatsapp-icon.png"
+          alt="WhatsApp"
+          className="whatsapp-icon"
+        />
       </a>
     </>
   );
