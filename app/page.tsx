@@ -94,7 +94,7 @@ const Home = () => {
           name="keywords"
           content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti, servis, personel taşıma"
         />
-        <link rel="icon" href="/big-elit-tur.png" />
+        <link rel="icon" href="/big-elit-tur.ico" />
       </Head>
       <header className="navbar">
         <div className="logo">
@@ -135,7 +135,7 @@ const Home = () => {
         <p>Her Zaman Hizmetinizdeyiz</p>
         <div className="service-cards">
           <div className="service-card">
-            <img src="/taksi.svg" alt="Personel taşıma" />
+            <img src="/bus.png" alt="Personel taşıma" />
             <h3>Personel</h3>
             <p>Personel taşımacılık hizmetleri sunuyoruz.</p>
           </div>
@@ -147,7 +147,7 @@ const Home = () => {
           <div className="service-card">
             <img src="/servis.svg" alt="Servis Hizmeti" />
             <h3>Hizmet</h3>
-            <p>7/24 hızlı taksi hizmetleri. Her zaman hizmetinizdeyiz.</p>
+            <p>7/24 hızlı servis hizmetleri. Her zaman hizmetinizdeyiz.</p>
           </div>
         </div>
       </section>
@@ -177,7 +177,7 @@ const Home = () => {
         <div className="vehicle-cards">
           <div className="vehicle-card">
             <div className="vehicle-image-wrapper">
-              <img src="/ford.jpg" alt="Ford Taksi" />
+              <img src="/ford.jpg" alt="Ford Servis" />
             </div>
             <h3>Ford</h3>
             <div className="vehicle-details">
@@ -197,7 +197,7 @@ const Home = () => {
           </div>
           <div className="vehicle-card">
             <div className="vehicle-image-wrapper">
-              <img src="/toyota.jpg" alt="Toyota Taksi" />
+              <img src="/toyota.jpg" alt="Toyota Servis" />
             </div>
             <h3>Toyota</h3>
             <div className="vehicle-details">
@@ -217,7 +217,7 @@ const Home = () => {
           </div>
           <div className="vehicle-card">
             <div className="vehicle-image-wrapper">
-              <img src="/mercedes.webp" alt="Mercedes Taksi" />
+              <img src="/mercedes.webp" alt="Mercedes Servis" />
             </div>
             <h3>Mercedes</h3>
             <div className="vehicle-details">

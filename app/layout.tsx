@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Elit Tur",
   description: "Evinizden İş Yerine Kolay ve Güvenli Taşımacılık",
-  icons: ["/favicon.ico"],
+  icons: ["/big-elit-tur.ico"],
 };
 
 export default function RootLayout({
