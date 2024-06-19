@@ -267,6 +267,32 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <footer className="footer">
+        <div className="footer-content">
+          <a
+            href="https://www.linkedin.com/company/omtun/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="omtun-logo"
+          >
+            <img
+              src="/omtunLabs.png"
+              alt="OmTun Labs Logo"
+              className="omtun-logo-img"
+            />
+          </a>
+          <p>
+            <a
+              href="https://www.linkedin.com/company/omtun/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OmTun Labs
+            </a>{" "}
+            - Teknolojide Güven ve Yenilik.
+          </p>
+        </div>
+      </footer>
 
       <a
         className="whatsapp-float"

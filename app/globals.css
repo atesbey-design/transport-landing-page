@@ -588,6 +588,62 @@ body {
   transition: transform 0.3s;
 }
 
+.footer {
+  background-color: #000000;
+  color: #ddd;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #FFA500;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #FF8C00;
+  text-decoration: underline;
+}
+
+.omtun-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.omtun-logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.omtun-logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.omtun-logo:hover .omtun-logo-img {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.omtun-logo:hover span {
+  color: #FFA500;
+  transition: color 0.3s;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
