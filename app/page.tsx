@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const Home = () => {
   const WHATSAPP_NUMBER = "+905552332833";
+
   useEffect(() => {
     // Hero section image slider
     let currentIndex = 0;
@@ -22,24 +23,25 @@ const Home = () => {
     let testimonialIndex = 0;
     const testimonials = [
       {
-        text: "Harika Destek, hızlı ve etkili hizmetiniz için, dostça ve profesyonel destek ekibiniz için teşekkür etmek istiyorum! Uzman firmanızı tüm arkadaşlarıma tavsiye edeceğim.",
-        author: "William Hoy",
+        text: "Harika destek, hızlı ve etkili hizmetiniz için, dostça ve profesyonel destek ekibiniz için teşekkür etmek istiyorum! Uzman firmanızı tüm arkadaşlarıma tavsiye edeceğim.",
+        author: "Ahmet Yılmaz",
         stars: "★★★★★",
         image: "/author.jpg",
       },
       {
         text: "Mükemmel hizmet! Taşımacılık ihtiyaçlarım için her zaman bu firmayı tercih edeceğim.",
-        author: "Jane Doe",
+        author: "Ayşe Kaya",
         stars: "★★★★★",
         image: "/author2.jpg",
       },
       {
         text: "Hızlı ve güvenilir hizmet. Gerçekten çok memnun kaldım. Teşekkürler!",
-        author: "John Smith",
+        author: "Mehmet Demir",
         stars: "★★★★★",
         image: "/author3.jpg",
       },
     ];
+
     const testimonialTextElement = document.querySelector(
       ".testimonial-text p"
     ) as HTMLElement;
@@ -49,16 +51,15 @@ const Home = () => {
     const testimonialStarsElement = document.querySelector(
       ".testimonial-author .stars"
     ) as HTMLElement;
-    const testimonialImageElement = document.querySelector(
-      ".testimonial-author img"
-    ) as HTMLImageElement;
+
 
     const changeTestimonial = () => {
       const testimonial = testimonials[testimonialIndex];
       testimonialTextElement.innerText = testimonial.text;
       testimonialAuthorElement.innerText = testimonial.author;
       testimonialStarsElement.innerText = testimonial.stars;
-      testimonialImageElement.src = testimonial.image;
+     
+      
       testimonialIndex = (testimonialIndex + 1) % testimonials.length;
     };
 
@@ -84,14 +85,14 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Servis Taşımacılığı</title>
+        <title>Servis Taşımacılığı - Güvenli ve Kolay Taşımacılık Hizmetleri</title>
         <meta
           name="description"
-          content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık"
+          content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık Hizmeti. Personel ve öğrenci taşımacılığı için en iyi seçenek."
         />
         <meta
           name="keywords"
-          content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti,servis,personel taşıma"
+          content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti, servis, personel taşıma"
         />
         <link rel="icon" href="/big-elit-tur.png" />
       </Head>
@@ -119,12 +120,14 @@ const Home = () => {
         <div className="overlay"></div>
         <h1>Güvenilir Taşımacılık Hizmeti</h1>
         <p>Konforlu ve Kolay Taşımacılık</p>
-        <p>Telefon: +90 123456789</p>
-        <a target="_blank" rel="noopener noreferrer"   href={`https://wa.me/${WHATSAPP_NUMBER}`}>
-
-        <button>Şimdi Rezervasyon Yap</button>
-</a>
-      
+        <p>Telefon: +90 555 233 28 33</p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        >
+          <button>Şimdi Rezervasyon Yap</button>
+        </a>
       </section>
 
       <section className="services" id="services">
@@ -132,19 +135,19 @@ const Home = () => {
         <p>Her Zaman Hizmetinizdeyiz</p>
         <div className="service-cards">
           <div className="service-card">
-            <img src="/taksi.svg" alt="personel taşıma" />
+            <img src="/taksi.svg" alt="Personel taşıma" />
             <h3>Personel</h3>
             <p>Personel taşımacılık hizmetleri sunuyoruz.</p>
           </div>
           <div className="service-card">
-            <img src="/paket.svg" alt="öğrenci taşıma" />
-            <h3>Öğrenci </h3>
+            <img src="/paket.svg" alt="Öğrenci taşıma" />
+            <h3>Öğrenci</h3>
             <p>Öğrencilere özel taşımacılık hizmetleri sunuyoruz.</p>
           </div>
           <div className="service-card">
             <img src="/servis.svg" alt="Servis Hizmeti" />
             <h3>Hizmet</h3>
-            <p>24/7 hızlı taksi hizmetleri. Her zaman hizmetinizdeyiz.</p>
+            <p>7/24 hızlı taksi hizmetleri. Her zaman hizmetinizdeyiz.</p>
           </div>
         </div>
       </section>
@@ -173,7 +176,9 @@ const Home = () => {
         <p>24/7 hızlı servis hizmetleri</p>
         <div className="vehicle-cards">
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Ford Taksi" />
+            <div className="vehicle-image-wrapper">
+              <img src="/ford.jpg" alt="Ford Taksi" />
+            </div>
             <h3>Ford</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -182,7 +187,6 @@ const Home = () => {
               <span>Yeni</span>
               <span>2024</span>
             </div>
-            <p className="price">$1,000.00/Gün</p>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -192,7 +196,9 @@ const Home = () => {
             </a>
           </div>
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Toyota Taksi" />
+            <div className="vehicle-image-wrapper">
+              <img src="/toyota.jpg" alt="Toyota Taksi" />
+            </div>
             <h3>Toyota</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -201,7 +207,6 @@ const Home = () => {
               <span>Yeni</span>
               <span>2024</span>
             </div>
-            <p className="price">$1,000.00/Gün</p>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -211,7 +216,9 @@ const Home = () => {
             </a>
           </div>
           <div className="vehicle-card">
-            <img src="/back.jpg" alt="Mercedes Taksi" />
+            <div className="vehicle-image-wrapper">
+              <img src="/mercedes.webp" alt="Mercedes Taksi" />
+            </div>
             <h3>Mercedes</h3>
             <div className="vehicle-details">
               <span>4 Kişi</span>
@@ -220,7 +227,6 @@ const Home = () => {
               <span>Yeni</span>
               <span>2024</span>
             </div>
-            <p className="price">$1,000.00/Gün</p>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -231,22 +237,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <div className="gallery" id="gallery">
+      <section className="gallery" id="gallery">
         <h2>Galeri</h2>
         <p>En iyi araç resimlerimiz</p>
         <div className="gallery-grid">
           <div className="gallery-item">
-            <img src="/back.jpg" alt="Araba 1" />
+            <img src="/tasimacilik.jpg" alt="Araba 1" />
           </div>
           <div className="gallery-item">
-            <img src="/back2.jpg" alt="Araba 2" />
+            <img src="/tasimacilik2.webp" alt="Araba 2" />
           </div>
           <div className="gallery-item">
-            <img src="/back.jpg" alt="Araba 3" />
+            <img src="/tasimacilik3.jpg" alt="Araba 3" />
           </div>
           <div className="gallery-item">
-            <img src="/back2.jpg" alt="Araba 4" />
+            <img src="/tasimacilik4.jpg" alt="Araba 4" />
           </div>
           <div className="gallery-item">
             <img src="/back.jpg" alt="Araba 5" />
@@ -255,7 +260,7 @@ const Home = () => {
             <img src="/back2.jpg" alt="Araba 6" />
           </div>
         </div>
-      </div>
+      </section>
 
       <section className="testimonials">
         <h2>GÖRÜŞLER</h2>
@@ -271,9 +276,9 @@ const Home = () => {
           </div>
           <div className="quote-icon right">”</div>
           <div className="testimonial-author">
-            <img src="/author.jpg" alt="William Hoy" />
-            <h3>William Hoy</h3>
-            <div className="stars">★★★★★</div>
+           
+            <h3 className="testimonial-name"></h3>
+            <div className="stars"></div>
           </div>
         </div>
       </section>
