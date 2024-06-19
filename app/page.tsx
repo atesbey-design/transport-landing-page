@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 
 const Home = () => {
-  const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+  const WHATSAPP_NUMBER = "+90 555 233 28 33";
   useEffect(() => {
     // Hero section image slider
     let currentIndex = 0;
