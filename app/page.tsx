@@ -52,14 +52,12 @@ const Home = () => {
       ".testimonial-author .stars"
     ) as HTMLElement;
 
-
     const changeTestimonial = () => {
       const testimonial = testimonials[testimonialIndex];
       testimonialTextElement.innerText = testimonial.text;
       testimonialAuthorElement.innerText = testimonial.author;
       testimonialStarsElement.innerText = testimonial.stars;
-     
-      
+
       testimonialIndex = (testimonialIndex + 1) % testimonials.length;
     };
 
@@ -84,18 +82,6 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <title>Servis Taşımacılığı - Güvenli ve Kolay Taşımacılık Hizmetleri</title>
-        <meta
-          name="description"
-          content="Evinizden İş Yerine Kolay ve Güvenli Taşımacılık Hizmeti. Personel ve öğrenci taşımacılığı için en iyi seçenek."
-        />
-        <meta
-          name="keywords"
-          content="taşımacılık, servis, güvenli taşımacılık, kolay taşımacılık, öğrenci taşıma hizmeti, servis, personel taşıma"
-        />
-        <link rel="icon" href="/big-elit-tur.ico" />
-      </Head>
       <header className="navbar">
         <div className="logo">
           <img src="/big-elit-tur.png" alt="Servis Taşımacılığı Logo" />
@@ -276,7 +262,6 @@ const Home = () => {
           </div>
           <div className="quote-icon right">”</div>
           <div className="testimonial-author">
-           
             <h3 className="testimonial-name"></h3>
             <div className="stars"></div>
           </div>
