@@ -6,7 +6,6 @@ const Home = () => {
   const WHATSAPP_NUMBER = "+905552332833";
 
   useEffect(() => {
-    // Hero section image slider
     let currentIndex = 0;
     const images = ["/back.jpg", "/back2.jpg", "/transport.jpg"];
     const heroElement = document.querySelector(".hero") as HTMLElement;
@@ -19,7 +18,6 @@ const Home = () => {
     changeBackgroundImage();
     const intervalId = setInterval(changeBackgroundImage, 5000);
 
-    // Testimonials slider
     let testimonialIndex = 0;
     const testimonials = [
       {
@@ -64,7 +62,6 @@ const Home = () => {
     changeTestimonial();
     const testimonialIntervalId = setInterval(changeTestimonial, 5000);
 
-    // Navbar Toggle Script
     const menuToggle = document.querySelector(".menu-toggle") as HTMLElement;
     const navLinks = document.querySelector(".nav-links") as HTMLElement;
 
@@ -134,6 +131,11 @@ const Home = () => {
             <img src="/servis.svg" alt="Servis Hizmeti" />
             <h3>Hizmet</h3>
             <p>7/24 hızlı servis hizmetleri. Her zaman hizmetinizdeyiz.</p>
+          </div>
+          <div className="service-card">
+            <img src="/orange.png" alt="VIP Taşımacılık" />
+            <h3>VIP Taşımacılık</h3>
+            <p>Carevella ve Vito araçlarımızla VIP taşımacılık hizmeti sunuyoruz.</p>
           </div>
         </div>
       </section>
