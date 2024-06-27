@@ -1,3 +1,5 @@
+
+
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
@@ -11,8 +13,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-left: 20px; /* Sol boşluk */
-  padding-right: 20px; /* Sağ boşluk */
+  padding-left: 20px;
+  padding-right: 20px;
   scroll-behavior: smooth;
 }
 
@@ -29,15 +31,13 @@ body {
 .navbar .logo {
   display: flex;
   align-items: center;
-
-  border-radius: 50%; 
+  border-radius: 50%;
   overflow: hidden;
 }
 
 .navbar .logo img {
   height: 60px;
 }
-
 
 .navbar nav {
   display: flex;
@@ -166,13 +166,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah katman */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .hero h1, .hero p, .hero button {
   position: relative;
-  z-index: 2; /* Yazıları ve butonu öne getir */
+  z-index: 2;
 }
 
 .hero h1 {
@@ -221,6 +221,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .service-card {
@@ -283,6 +284,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .vehicle-card {
@@ -349,9 +351,10 @@ body {
 .vehicle-card button:hover {
   background-color: #E07B00;
 }
+
 .vehicle-image-wrapper {
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
@@ -365,12 +368,11 @@ body {
   object-fit: cover;
 }
 
-
 /* Hero Orange Section */
 .hero-orange {
   position: relative;
   height: 60vh;
-  background: #fdac48; /* Turuncu arka plan */
+  background: #fdac48;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,20 +388,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Yarı saydam katman */
+  background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
 .hero-orange .hero-content {
   position: relative;
-  z-index: 2; /* İçeriği öne getir */
+  z-index: 2;
 }
 
 .hero-orange img {
   height: 140px;
   background-color: white;
   border-radius: 50%;
- 
 }
 .hero-orange img:hover {
   transform: scale(1.1);
@@ -408,12 +409,10 @@ body {
 
 .hero-orange h1 {
   font-size: 2.5rem;
-  
 }
 
 .hero-orange p {
   font-size: 1.2rem;
-
 }
 
 .hero-orange button {
@@ -477,9 +476,6 @@ body {
   justify-content: center;
 }
 
-
-
-
 .gallery-item:hover img {
   transform: scale(1.1);
   transition: transform 0.5s;
@@ -513,7 +509,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 350px; /* Yükseklik belirli */
+  height: 350px;
 }
 
 .testimonial-content .quote-icon {
@@ -529,7 +525,7 @@ body {
   font-style: italic;
   color: #666;
   margin: 20px 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .testimonial-author {
@@ -643,20 +639,19 @@ body {
   transition: color 0.3s;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
-
-
   .navbar {
-  display: none;
+    display: none;
   }
+  
   .hero-orange  {
-   height: min-content;
+    height: min-content;
   }
+
   .gallery-images {
-    grid-template-columns: 1fr; /* Tek sütun yapar */
-    gap: 10px; /* Daha küçük boşluklar */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .whatsapp-float {
@@ -670,8 +665,6 @@ body {
     width: 100%;
     height: 100%;
   }
-
-
 
   .vehicle-cards {
     flex-direction: column;
@@ -688,6 +681,11 @@ body {
 
   .nav-links.active {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-cards {
     flex-direction: column;
     align-items: center;
   }
